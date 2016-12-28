@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 
 // ========
 // Leaderboard Example
@@ -11,18 +11,24 @@ const Bot = require('../dist')
 
 const bot = new Bot({
   name: process.env.SLITHER_SERVER_NAME || 'RattleSnake',
-  // logLevel: 'debug',
+  logLevel: 'debug',
   server: process.env.SLITHER_SERVER || '199.21.79.246:444'
 })
 
 // Just listen for the leaderboard event then disconnect
 bot.once('leaderboard', function(leaderboard) {
-  console.log()
-  console.log('====== TOP ' + leaderboard.length + ' ======')
-  console.log()
+  // console.log()
+  // console.log('====== TOP ' + leaderboard.length + ' ======')
+  // console.log()
+  //
+  // leaderboard.forEach(function(entry, i) {
+  //   console.log('#' + i + '. ' + entry.name)
+  // })
+
+  bot.logger.debug('====== TOP ${leaderboard.length} ======'.blue)
 
   leaderboard.forEach(function(entry, i) {
-    console.log('#' + i + '. ' + entry.name)
+    bot.logger.debug('#${i}. + ${entry.name}'.green)
   })
 
   bot.close()

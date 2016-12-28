@@ -13,7 +13,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var Packet = function () {
   // Argument can be the size of a new packet or an existing array
-
   function Packet() {
     _classCallCheck(this, Packet);
 

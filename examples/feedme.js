@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 
 // BROWSER CODE
 // COPY THE CODE BELOW INTO THE BROWSER DEVELOPER CONSOLE

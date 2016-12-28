@@ -1,6 +1,4 @@
-'use strict'
-
-import winston from 'winston'
+const winston = require('winston');
 
 export default new (winston.Logger)({
   level: 'debug',
@@ -8,5 +6,5 @@ export default new (winston.Logger)({
     new (winston.transports.Console)({
       colorize: true
     })
-  ]
-})
+  ];
+});
